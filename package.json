@@ -1,0 +1,32 @@
+{
+  "name": "squarespace-project",
+  "version": "0.0.1",
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "nodemon --watch src --exec 'rm -rf temp && npm run-script build-dev && npm run-script serve-dev'",
+    "lint": "eslint ./src",
+    "lint-watch": "watch 'npm run-script lint' './src' --ignoreDotFiles",
+    "build": "rm -rf lib && npm run-script build-server && npm run-script build-client", 
+    "serve": "NODE_ENV=production node lib/server/server.js",
+    "serve-dev": "node temp/server/server.js",
+    "build-server": "NODE_ENV=production babel src/server -d lib/server",
+    "build-client": "NODE_ENV=production rollup -c --environment BUILD:production && rsync -r --exclude='js' src/client lib",
+    "build-server-dev": "babel src/server -d temp/server",
+    "build-client-dev": "rollup -c --environment BUILD:development && rsync -r --exclude='js' src/client temp",
+    "build-dev": "npm run-script build-server-dev && npm run-script build-client-dev"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-preset-babili": "0.0.9",
+    "babel-preset-es2015": "^6.18.0",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "nodemon": "^1.11.0",
+    "rollup": "^0.37.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "watch": "^1.0.1"
+  }
+}

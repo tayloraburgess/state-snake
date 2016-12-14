@@ -1,0 +1,25 @@
+div, canvas {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Edmondsans;
+  src: url('edmondsans.otf');
+}
+
+body {
+  font-family: 'Edmondsans', sans-serif;
+  color: #acacac;
+  background: #f2f2f2;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+canvas#game {
+  display: block;
+  margin: 0 auto;
+  border: 5px solid #464646;
+  border-radius: 4px;
+}
