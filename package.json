@@ -1,7 +1,8 @@
 {
-  "name": "squarespace-project",
+  "name": "snake",
   "version": "0.0.1",
   "main": "lib/server.js",
+  "author": "Taylor Burgess",
   "scripts": {
     "start": "nodemon --watch src --exec 'rm -rf temp && npm run-script build-dev && npm run-script serve-dev'",
     "lint": "eslint ./src",

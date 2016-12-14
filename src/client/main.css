@@ -1,10 +1,10 @@
-div, canvas {
-  box-sizing: border-box;
-}
-
 @font-face {
   font-family: Edmondsans;
   src: url('edmondsans.otf');
+}
+
+canvas {
+  box-sizing: border-box;
 }
 
 body {
