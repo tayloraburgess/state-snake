@@ -1,8 +1,8 @@
-# snake
+# state-snake
 
-A simple in-browser implementation of the arcade game.
+A simple, relatively dependency-free, in-browser implementation of the arcade game.
 
-## [Live Demo](http://ss-snake.herokuapp.com)
+## [Live Demo](http://state-snake.herokuapp.com)
 
 ## Architecture Overview
 
@@ -68,7 +68,7 @@ Additionally, it exposes functions that return information about the most recent
 	2. `npm run serve`
 	3. Navigate to `localhost:3000`
 
-## Next Steps
+## Further Development Ideas 
 
 (In no particular order)
 
@@ -94,4 +94,3 @@ A simple step, but a counter somewhere in the view that tracks a user's best sco
 Currently, when the game starts, the snake starts moving to the right as an arbitrary default direction. However, because the snake starts each game in a random location on the board, things sometimes go poorly when, say, the snake starts one or two tiles from the right wall and the player can’t react in time.
 
 So, adding logic to the initial state generation in `state-controller.js` that could intelligently calculate the default snake direction based on the snake’s starting location—making it move, say, toward the wall that it’s farthest from—could be a good next step.
-

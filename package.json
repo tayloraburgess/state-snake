@@ -1,5 +1,5 @@
 {
-  "name": "snake",
+  "name": "state-snake",
   "version": "0.0.1",
   "main": "lib/server.js",
   "author": "Taylor Burgess",
