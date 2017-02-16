@@ -32,7 +32,7 @@ The highest-level module. It acts as a controller and handles the basic flow of 
 #### state-controller.js
 
 A controller that interacts primarily with `state.js`. It:
-- Generates new immutable states from user input passed to it by `game.js` and previous state information from `state.js`
+- Generates new states from user input passed to it by `game.js` and previous state information from `state.js`
 - Sends new states to `state.js`
 - Exposes some functions that return state information necessary for `game.js`’s logic
 
@@ -45,7 +45,7 @@ The view module. It renders game states (passed to it by game.js) to an HTML5 ca
 
 #### state.js
 
-The state/model module. Internally, it stores a series of immutable game states, so that the entire history of a played game exists within an instance.
+The state/model module. Internally, it stores a series of game states, so that the entire history of a played game exists within an instance.
 
 Additionally, it exposes functions that return information about the most recent game state.
 
